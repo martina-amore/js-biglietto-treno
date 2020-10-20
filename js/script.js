@@ -4,14 +4,25 @@ var kmUtente = prompt("Quanti chilometri vuoi percorrere?");
 
 var prezzo = kmUtente * 0.21;
 
+var prezzoMin18 = (prezzo - (prezzo * 0.20));
+
+var prezzoOver65 = (prezzo - (prezzo * 0.40));
+
+var prezzoMin18Fix = prezzoMin18.toFixed(2);
+
+var prezzoOver65Fix = prezzoOver65.toFixed(2);
+
 if (anniUtente < 18) {
-    document.getElementById('prezzo').innerHTML = "L'importo del tuo biglietto è: € " + prezzo * 0.80;
+    document.getElementById('risultato').innerHTML = "L'importo del tuo biglietto è: € " + prezzoMin18Fix;
 }
 
 else if (anniUtente > 64) {
-    document.getElementById('prezzo').innerHTML = "L'importo del tuo biglietto è: € " + prezzo * 0.60;
+    document.getElementById('risultato').innerHTML = "L'importo del tuo biglietto è: € " + prezzoOver65Fix;
 }
 
 else {
-    document.getElementById('prezzo').innerHTML = "L'importo del tuo biglietto è: € " + prezzo;
+    document.getElementById('risultato').innerHTML = "L'importo del tuo biglietto è: € " + prezzo;
 }
+
+// console.log(prezzoMin18Fix);
+// console.log(prezzoOver65Fix);

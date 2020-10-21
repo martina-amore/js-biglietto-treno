@@ -88,13 +88,13 @@ input[type=button]:focus{
     background-color: white;
     margin: 0 auto;
     padding-bottom: 20px;
-    /* display: none; */
+    display: none;
 }
 
 h1.bottom {
     color: white;
     margin-top: 25px;
-    /* display: none; */
+    display: none;
 }
 
 .passengers {

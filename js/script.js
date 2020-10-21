@@ -1,5 +1,9 @@
 var generaButton = document.getElementById('generaButton');
 generaButton.addEventListener('click', function(){
+
+    document.getElementById("bottomTitle").style.display = "block";
+    document.getElementById("ticketBox").style.display = "block";
+
     var nomeUtente = document.getElementById('nomeCognome').value;
     var kmUtente = document.getElementById('km').value;
     var anniUtente = document.getElementById('age').value;

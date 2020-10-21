@@ -107,6 +107,7 @@ h1.bottom {
     float: left;
     width: 25%;
     padding: 25px;
+    height: 100%;
 }
 
 .offerta, .carrozza, .codice-cp, .costo-biglietto {

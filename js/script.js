@@ -43,6 +43,11 @@ annullaButton.addEventListener('click', function(){
     document.getElementById('nomeCognome').value = null;
     document.getElementById('km').value = null;
     document.getElementById('age').value = 'minorenne';
+    document.getElementById('nomeUtente').innerHTML = null;
+    document.getElementById('offerta').innerHTML = null;
+    document.getElementById('carrozza').innerHTML = null;
+    document.getElementById('codiceCP').innerHTML = null;
+    document.getElementById('costoBiglietto').innerHTML = null;
 
 }
 );

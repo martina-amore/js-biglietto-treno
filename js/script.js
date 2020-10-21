@@ -36,3 +36,13 @@ document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * (9999
 
 }
 );
+
+var annullaButton = document.getElementById('annullaButton');
+annullaButton.addEventListener('click', function(){
+
+    document.getElementById('nomeCognome').value = null;
+    document.getElementById('km').value = null;
+    document.getElementById('age').value = 'minorenne';
+
+}
+);

@@ -1,7 +1,3 @@
-var nomeUtente;
-var kmUtente = document.getElementById('km').value;
-var anniUtente = document.getElementById('age').value;
-
 var generaButton = document.getElementById('generaButton');
 generaButton.addEventListener('click', function(){
     var nomeUtente = document.getElementById('nomeCognome').value;
@@ -32,5 +28,7 @@ generaButton.addEventListener('click', function(){
 document.getElementById('nomeUtente').innerHTML = nomeUtente;
 document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 20 + 1);
 document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
+
+
 }
 );

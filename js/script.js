@@ -31,6 +31,6 @@ generaButton.addEventListener('click', function(){
 
 document.getElementById('nomeUtente').innerHTML = nomeUtente;
 document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 20 + 1);
-document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * 100000);
+document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
 }
 );

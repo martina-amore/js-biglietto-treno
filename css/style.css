@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+*:focus {
+    outline: none;
+}
+
+body {
+    background-color: #b91450;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+/* PRIMO BOX */
+.calcolo-prezzo-box {
+    max-width: 1000px;
+    text-align: center;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0 auto;
+    box-shadow: 1px 1px 8px 2px rgba(0,0,0,0.5);
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+h1.top {
+    color: white;
+    margin: 20px;
+}
+
+h3 {
+    color: #b91450;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.box-1.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttons {
+    margin-top: 40px;
+}
+
+input[type=text], input[type=number] {
+    font-size: 16px;
+    padding: 4px;
+    border: 1px solid #b91450;
+    border-radius: 4px;
+    text-align: center;
+}
+
+input[type=text]:focus, input[type=number]:focus {
+    border: 1px solid blue;
+}
+
+.age-choose {
+    font-size: 16px;
+    padding: 4px;
+    border: 1px solid #b91450;
+    border-radius: 4px;
+}
+
+input[type=button] {
+    color: #b91450;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 4px;
+    margin: 10px;
+    background-color: #cccccc;
+    border: 1px solid grey;
+    border-radius: 4px;
+}
+
+input[type=button]:focus{
+    border: 2px solid #9c609d;
+}
+
+/* SECONDO BOX */
+.ticket-box {
+    padding: 20px;
+    max-width: 1000px;
+    text-align: justify;
+    background-color: white;
+    margin: 0 auto;
+    padding-bottom: 20px;
+    /* display: none; */
+}
+
+h1.bottom {
+    color: white;
+    margin-top: 25px;
+    /* display: none; */
+}
+
+.passengers {
+    border: 1px solid black;
+    border-right: transparent;
+}
+
+.passenger-name {
+    background-color: #808080;
+    float: left;
+    width: 25%;
+    padding: 25px;
+}
+
+.offerta, .carrozza, .codice-cp, .costo-biglietto {
+    float: left;
+    padding: 25px;
+}
+
+.passenger-details.flex {
+
+}
+
+.passenger-details p {
+    /* margin-top: 30px; */
+}
+
+.offerta {
+    width: 25%;
+}
+
+.carrozza {
+    width: 15%;
+}
+
+.codice-cp {
+    width: 15%;
+}
+
+.costo-biglietto {
+    width: 20%;
+}
+
+.passengers::after {
+    clear: both;
+    display: table;
+    content: '';
+}

@@ -1,28 +1,36 @@
-var anniUtente = prompt("Ciao, quanti anni hai?");
+var nomeUtente;
+var kmUtente = document.getElementById('km').value;
+var anniUtente = document.getElementById('age').value;
 
-var kmUtente = prompt("Quanti chilometri vuoi percorrere?");
+var generaButton = document.getElementById('generaButton');
+generaButton.addEventListener('click', function(){
+    var nomeUtente = document.getElementById('nomeCognome').value;
+    var kmUtente = document.getElementById('km').value;
+    var anniUtente = document.getElementById('age').value;
+    var PREZZO = 0.21 * kmUtente;
+    var PREZZO_MIN18 = (PREZZO - (PREZZO * 0.20));
+    var PREZZO_OVER65 = (PREZZO - (PREZZO * 0.40));
+    var PREZZO_FIXED = PREZZO.toFixed(2);
+    var PREZZO_MIN18FIXED = PREZZO_MIN18.toFixed(2);
+    var PREZZO_OVER65FIXED = PREZZO_OVER65.toFixed(2);
 
-var prezzo = kmUtente * 0.21;
+    if (document.getElementById('age').value == 'minorenne') {
+        document.getElementById('offerta').innerHTML = "Sconto Minorenne";
+        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_MIN18FIXED;
+    }
 
-var prezzoMin18 = (prezzo - (prezzo * 0.20));
+    else if (document.getElementById('age').value == 'over65') {
+        document.getElementById('offerta').innerHTML = "Sconto Over65";
+        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_OVER65FIXED;
+    }
 
-var prezzoOver65 = (prezzo - (prezzo * 0.40));
+    else if (document.getElementById('age').value == 'standard'){
+        document.getElementById('offerta').innerHTML = "Prezzo Standard";
+        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_FIXED;
+    }
 
-var prezzoMin18Fix = prezzoMin18.toFixed(2);
-
-var prezzoOver65Fix = prezzoOver65.toFixed(2);
-
-if (anniUtente < 18) {
-    document.getElementById('risultato').innerHTML = "L'importo del tuo biglietto è: € " + prezzoMin18Fix;
+document.getElementById('nomeUtente').innerHTML = nomeUtente;
+document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 20 + 1);
+document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * 100000);
 }
-
-else if (anniUtente > 64) {
-    document.getElementById('risultato').innerHTML = "L'importo del tuo biglietto è: € " + prezzoOver65Fix;
-}
-
-else {
-    document.getElementById('risultato').innerHTML = "L'importo del tuo biglietto è: € " + prezzo;
-}
-
-// console.log(prezzoMin18Fix);
-// console.log(prezzoOver65Fix);
+);

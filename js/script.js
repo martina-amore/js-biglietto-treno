@@ -11,24 +11,22 @@ generaButton.addEventListener('click', function(){
     var kmUtente = document.getElementById('km').value;
     var anniUtente = document.getElementById('age').value;
     var PREZZO = 0.21 * kmUtente;
-    var PREZZO_MIN18 = (PREZZO - (PREZZO * 0.20));
-    var PREZZO_OVER65 = (PREZZO - (PREZZO * 0.40));
+    var PREZZO_MIN18 = (PREZZO - (PREZZO * 0.20)).toFixed(2);
+    var PREZZO_OVER65 = (PREZZO - (PREZZO * 0.40)).toFixed(2);
     var PREZZO_FIXED = PREZZO.toFixed(2);
-    var PREZZO_MIN18FIXED = PREZZO_MIN18.toFixed(2);
-    var PREZZO_OVER65FIXED = PREZZO_OVER65.toFixed(2);
 
     // CONDIZIONI PER FAR APPARIRE UN DIFFERENTE PREZZO
-    if (document.getElementById('age').value == 'minorenne') {
+    if (anniUtente == 'minorenne') {
         document.getElementById('offerta').innerHTML = "Sconto Minorenne";
-        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_MIN18FIXED;
+        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_MIN18;
     }
 
-    else if (document.getElementById('age').value == 'over65') {
+    else if (anniUtente == 'over65') {
         document.getElementById('offerta').innerHTML = "Sconto Over65";
-        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_OVER65FIXED;
+        document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_OVER65;
     }
 
-    else if (document.getElementById('age').value == 'standard'){
+    else {
         document.getElementById('offerta').innerHTML = "Prezzo Standard";
         document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_FIXED;
     }

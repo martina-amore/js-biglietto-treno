@@ -1,3 +1,4 @@
+/* GENERALI */
 * {
     box-sizing: border-box;
     padding: 0;
@@ -113,10 +114,6 @@ h1.bottom {
 .offerta, .carrozza, .codice-cp, .costo-biglietto {
     float: left;
     padding: 25px;
-}
-
-.passenger-details p {
-    /* margin-top: 30px; */
 }
 
 .offerta {

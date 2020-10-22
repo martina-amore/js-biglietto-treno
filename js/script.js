@@ -1,9 +1,12 @@
+// QUANDO SI PREME IL BOTTONE GENERA
 var generaButton = document.getElementById('generaButton');
 generaButton.addEventListener('click', function(){
 
+    // FAR APPARIRE IL SECONDO BLOCCO
     document.getElementById("bottomTitle").style.display = "block";
     document.getElementById("ticketBox").style.display = "block";
 
+    // DICHIARAZIONE VARIABILI
     var nomeUtente = document.getElementById('nomeCognome').value;
     var kmUtente = document.getElementById('km').value;
     var anniUtente = document.getElementById('age').value;
@@ -14,6 +17,7 @@ generaButton.addEventListener('click', function(){
     var PREZZO_MIN18FIXED = PREZZO_MIN18.toFixed(2);
     var PREZZO_OVER65FIXED = PREZZO_OVER65.toFixed(2);
 
+    // CONDIZIONI PER FAR APPARIRE UN DIFFERENTE PREZZO
     if (document.getElementById('age').value == 'minorenne') {
         document.getElementById('offerta').innerHTML = "Sconto Minorenne";
         document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_MIN18FIXED;
@@ -29,17 +33,23 @@ generaButton.addEventListener('click', function(){
         document.getElementById('costoBiglietto').innerHTML = "€ " + PREZZO_FIXED;
     }
 
-document.getElementById('nomeUtente').innerHTML = nomeUtente;
-document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 20 + 1);
-document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
+    // FAR APPARIRE NOME UTENTE
+    document.getElementById('nomeUtente').innerHTML = nomeUtente;
 
+    // FAR APPARIRE NUMERO RANDOM CARROZZA FINO A 20 INCLUSO
+    document.getElementById('carrozza').innerHTML = Math.floor(Math.random() * 20 + 1);
+
+    // FAR APPARIRE NUMERO RANDOM BIGLIETTO DA 90000 A 99999
+    document.getElementById('codiceCP').innerHTML = Math.floor(Math.random() * (99999 - 90000 + 1)) + 90000;
 
 }
 );
 
+// QUANDO SI PREME IL BOTTONE ANNULLA
 var annullaButton = document.getElementById('annullaButton');
 annullaButton.addEventListener('click', function(){
 
+    // RESETTARE VALORI SETTANDOLI SU NULL
     document.getElementById('nomeCognome').value = null;
     document.getElementById('km').value = null;
     document.getElementById('age').value = 'minorenne';
